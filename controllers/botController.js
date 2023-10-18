@@ -6,7 +6,7 @@ class BotController {
         const {from, to, phone, name, rate} = req.query
         const message = `ЗАКАЗ\nИмя: ${name}\nНомер: +${phone}\nОткуда: ${from}\nКуда: ${to}\nТариф: ${rate}`
         try {
-            await bot.sendMessage(953061764, message)
+            await bot.sendMessage(5359516739, message)
             return res.json(message)
         } catch (e) {
             return next(apiError.badRequest(e))
@@ -17,7 +17,7 @@ class BotController {
         const {phone} = req.query
         const message = `ЗАЯВКА НА ЗВОНОК\nНомер: +${phone}`
         try {
-            await bot.sendMessage(953061764, message)
+            await bot.sendMessage(5359516739, message)
             return res.json(message)
         } catch (e) {
             return next(apiError.badRequest(e))
