@@ -26,6 +26,7 @@ class BotController {
 
     async abstractQuery(req, res) {
         const test = 0
+        console.log(test)
         return res.json(test)
     }
 }
